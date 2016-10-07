@@ -43,12 +43,12 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.ll_bindaccount:
-                goBindActivity();
-                break;
-            case R.id.ll_mypush:
-                CommonUtil.showToast(R.string.toast_no_push, getParentActivity());
-                break;
+//            case R.id.ll_bindaccount:
+//                goBindActivity();
+//                break;
+//            case R.id.ll_mypush:
+//                CommonUtil.showToast(R.string.toast_no_push, getParentActivity());
+//                break;
             case R.id.ll_mycollect:
                 goCollectActivity();
                 break;
@@ -62,8 +62,8 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
     }
 
     private void onUIReady(View view){
-        mBindView = view.findViewById(R.id.ll_bindaccount);
-        mMyPushView = view.findViewById(R.id.ll_mypush);
+//        mBindView = view.findViewById(R.id.ll_bindaccount);
+//        mMyPushView = view.findViewById(R.id.ll_mypush);
         mMyCollectView = view.findViewById(R.id.ll_mycollect);
         mClieaCacheView = view.findViewById(R.id.ll_clearcache);
         mAboutView = view.findViewById(R.id.ll_about);
