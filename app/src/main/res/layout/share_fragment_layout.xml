@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/window_bg" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent">
+
+	<LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+      
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/link_icon">            
+        </ImageView>
+        
+        <TextView
+        android:id="@+id/tv_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/silver"
+        android:textSize="16sp"/>
+          
+    </LinearLayout>
+  
+    
+   <RelativeLayout 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:layout_above="@id/ll_bottom"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="10dp"
+        android:background="@drawable/sharekey_info_bg">
+
+        <EditText
+        android:id="@+id/et_content"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent"
+        android:gravity="left|top"
+        android:background="@null">            
+        </EditText>
+        
+        <FrameLayout
+        android:id="@+id/fl_phoneframe"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp">
+   
+	        <ImageView
+	        android:id="@+id/iv_pic"
+	        android:layout_width="100dp" 
+	        android:layout_height="120dp"
+	        android:background="@drawable/share_tb_back" 
+	    	android:scaleType="centerInside"    
+	        android:paddingTop="5dp"/>
+
+	        <ImageView
+	        android:layout_width="100dp" 
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/pin" />         
+	        
+	      
+        </FrameLayout>       
+          
+        <Button
+            android:id="@+id/btn_cancelimage"
+	        android:layout_width="30dp"
+	        android:layout_height="30dp"
+			android:layout_alignRight="@id/fl_phoneframe"
+			android:layout_alignBottom="@id/fl_phoneframe"
+	        android:background="@drawable/img_cancel"/>
+   
+        <TextView
+        android:id="@+id/tv_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/silver"
+        android:textSize="16sp"
+        android:text="" />
+         
+    </RelativeLayout>
+    
+</RelativeLayout>
+
+
+

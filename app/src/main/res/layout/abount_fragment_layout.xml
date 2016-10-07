@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" 
+    android:background="@color/window_bg" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <LinearLayout 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:gravity="center">
+       
+          <ImageView
+          android:id="@+id/iv_logo"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@drawable/logo_icon_big">	                
+          </ImageView>
+                   
+          <TextView
+          android:id="@+id/tv_version"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_marginTop="10dp"
+	      android:text="欢乐阅"
+	      android:textColor="#888888"
+	      android:textSize="20sp" />
+   </LinearLayout>
+     
+   <LinearLayout 
+         style="@style/leba_bg_layout">                  
+          <!--  意见与反馈	-->   
+          <LinearLayout 
+              android:id="@+id/ll_advise"
+              style="@style/leba_bg_top_layout">
+              <TextView android:textSize="16.0dip" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/advise" android:layout_weight="1.0" />
+              <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/setting_arrow"/>
+          </LinearLayout> 
+         
+           <View android:background="@drawable/leba_shape_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+
+          <!--  关注官方微博 	--> 
+           <LinearLayout 
+               android:id="@+id/ll_attention"
+           	 style="@style/leba_bg_mid_layout">
+              <TextView android:textSize="16.0dip" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/attention_weibo" android:layout_weight="1.0" />
+              <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/setting_arrow" />
+            </LinearLayout>
+
+           <View android:background="@drawable/leba_shape_line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+
+          <!--  检查更新 	--> 
+           <LinearLayout 
+               android:id="@+id/ll_checkupdate"
+               style="@style/leba_bg_bottom_layout" >
+              <TextView android:textSize="16.0dip" android:textColor="#ff333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/check_update" android:layout_weight="1.0" />
+              <ImageView android:id="@+id/iv_updateicon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/app_new" android:visibility="gone"/>
+            </LinearLayout>
+            
+          
+     </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:text="@string/about_bottom">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_bottom"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/about_adress"
+            android:autoLink="all">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_address"
+            android:gravity="center"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="#666666"
+            android:text="@string/about_content">
+        </TextView>
+    </RelativeLayout>
+    
+</LinearLayout>
+
