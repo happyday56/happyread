@@ -47,7 +47,7 @@ public class LAroundApplication extends Application  implements ItatisticsEvent{
 		
 		TCAgent.init(this);
 		TCAgent.setReportUncaughtExceptions(true);
-		ShareSDK.initSDK(this);
+//		ShareSDK.initSDK(this);
 	}
 	
 	public void setUserLoginResult(PublicType.UserLoginResult object){

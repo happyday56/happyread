@@ -8,8 +8,8 @@ android {
         applicationId "com.lgh.happyread"
         minSdkVersion 19
         targetSdkVersion 24
-        versionCode 10202
-        versionName "1.02.02"
+        versionCode 10100
+        versionName "1.1.0"
     }
     buildTypes {
         release {

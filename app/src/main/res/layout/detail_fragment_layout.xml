@@ -114,16 +114,16 @@
 		  android:layout_width="match_parent"
 		  android:layout_height="match_parent">
        		
-              <com.google.ads.AdView 
-				  android:id="@+id/adView" 
-				  android:layout_width="fill_parent"   
-				  android:layout_height="wrap_content"
-				  android:layout_alignParentBottom="true"
-				  ads:adUnitId="@string/adv_id"
-				  ads:adSize="BANNER" 
-				  ads:loadAdOnCreate="true"
-				  /> 
-		  
+              <!--<com.google.ads.AdView -->
+				  <!--android:id="@+id/adView" -->
+				  <!--android:layout_width="fill_parent"   -->
+				  <!--android:layout_height="wrap_content"-->
+				  <!--android:layout_alignParentBottom="true"-->
+				  <!--ads:adUnitId="@string/adv_id"-->
+				  <!--ads:adSize="BANNER" -->
+				  <!--ads:loadAdOnCreate="true"-->
+				  <!--/> -->
+		  <!---->
                         
                <android.view.ext.SatelliteMenu
 		       android:id="@+id/SatelliteMenu"

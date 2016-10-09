@@ -37,17 +37,17 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener,
                                                             IDialogInterface{
     private static final CommonLog log = LogFactory.createLog();
 
-    private  View mAdviseView;
-    private View mAttentionWeiboView;
-    private View mCheckUpdateView;
-    private ImageView mIVUpageIcon;
+//    private  View mAdviseView;
+//    private View mAttentionWeiboView;
+//    private View mCheckUpdateView;
+//    private ImageView mIVUpageIcon;
     private ImageView mLogoIcon;
     private TextView mTVVersion;
 
     private ClientEngine mClientEngine;
-    private PublicType.CheckUpdateResult object = null;
+//    private PublicType.CheckUpdateResult object = null;
 
-    private Handler mHandler;
+//    private Handler mHandler;
 
     @Nullable
     @Override
@@ -65,15 +65,15 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener,
     @Override
     public void onClick(View v) {
         switch(v.getId()){
-            case R.id.ll_advise:
-                goAdviseActivity();
-                break;
-            case R.id.ll_attention:
-                attention();
-                break;
-            case R.id.ll_checkupdate:
-                checkUpdate();
-                break;
+//            case R.id.ll_advise:
+//                goAdviseActivity();
+//                break;
+//            case R.id.ll_attention:
+//                attention();
+//                break;
+//            case R.id.ll_checkupdate:
+//                checkUpdate();
+//                break;
         }
     }
 
@@ -83,12 +83,12 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener,
                           Object extra) {
         log.e("onSuccess! requestAction = " + requestAction + ", dataPacket ==> \n" + dataPacket.toString());
 
-        switch(requestAction){
-            case PublicType.CHECK_UPDATE_MSGID:
-                onGetCheckUpdate(dataPacket, extra);
-                break;
-
-        }
+//        switch(requestAction){
+//            case PublicType.CHECK_UPDATE_MSGID:
+//                onGetCheckUpdate(dataPacket, extra);
+//                break;
+//
+//        }
     }
 
 
@@ -108,43 +108,43 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener,
 
     @Override
     public void onSure() {
-        if (updateDialog != null){
-            updateDialog.dismiss();
-        }
+//        if (updateDialog != null){
+//            updateDialog.dismiss();
+//        }
 
-        log.e("object:" + object);
-        if (object != null){
-            Intent intents = new Intent(Intent.ACTION_VIEW);
-            intents.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intents.setData(Uri.parse(object.mAppUrl));
-            startActivity(intents);
-            log.e("jump to url:" + object.mAppUrl);
-        }
+//        log.e("object:" + object);
+//        if (object != null){
+//            Intent intents = new Intent(Intent.ACTION_VIEW);
+//            intents.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intents.setData(Uri.parse(object.mAppUrl));
+//            startActivity(intents);
+//            log.e("jump to url:" + object.mAppUrl);
+//        }
 
     }
 
 
     @Override
     public void onCancel() {
-        if (updateDialog != null){
-            updateDialog.dismiss();
-        }
+//        if (updateDialog != null){
+//            updateDialog.dismiss();
+//        }
     }
 
 
     private void onUIReady(View view){
-        mAdviseView = view.findViewById(R.id.ll_advise);
-        mAttentionWeiboView = view.findViewById(R.id.ll_attention);
-        mCheckUpdateView = view.findViewById(R.id.ll_checkupdate);
-        mIVUpageIcon = (ImageView)view.findViewById(R.id.iv_updateicon);
-        mIVUpageIcon = (ImageView)view.findViewById(R.id.iv_updateicon);
+//        mAdviseView = view.findViewById(R.id.ll_advise);
+//        mAttentionWeiboView = view.findViewById(R.id.ll_attention);
+//        mCheckUpdateView = view.findViewById(R.id.ll_checkupdate);
+//        mIVUpageIcon = (ImageView)view.findViewById(R.id.iv_updateicon);
+//        mIVUpageIcon = (ImageView)view.findViewById(R.id.iv_updateicon);
         mLogoIcon = (ImageView)view.findViewById(R.id.iv_logo);
         mTVVersion = (TextView) view.findViewById(R.id.tv_version);
 
 
-        mAttentionWeiboView.setOnClickListener(this);
-        mCheckUpdateView.setOnClickListener(this);
-        mAdviseView.setOnClickListener(this);
+//        mAttentionWeiboView.setOnClickListener(this);
+//        mCheckUpdateView.setOnClickListener(this);
+//        mAdviseView.setOnClickListener(this);
 
         initData();
 
@@ -153,39 +153,39 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener,
     private void initData(){
         mClientEngine=  ClientEngine.getInstance(getParentActivity());
 
-        object = LAroundApplication.getInstance().getNewVersion();
-        if (object != null && object.mHaveNewVer != 0){
-            showUpdateIcon(true);
-        }else{
-            showUpdateIcon(false);
+//        object = LAroundApplication.getInstance().getNewVersion();
+//        if (object != null && object.mHaveNewVer != 0){
+//            showUpdateIcon(true);
+//        }else{
+//            showUpdateIcon(false);
+//
+//            PublicType.CheckUpdate object = PublicTypeBuilder.buildCheckUpdate(getParentActivity());
+//            BaseRequestPacket packet = new BaseRequestPacket();
+//            packet.action = PublicType.CHECK_UPDATE_MSGID;
+//            packet.object = object;
+//            packet.extra = new Object();
+//            mClientEngine.httpGetRequestEx(packet, this);
+//        }
 
-            PublicType.CheckUpdate object = PublicTypeBuilder.buildCheckUpdate(getParentActivity());
-            BaseRequestPacket packet = new BaseRequestPacket();
-            packet.action = PublicType.CHECK_UPDATE_MSGID;
-            packet.object = object;
-            packet.extra = new Object();
-            mClientEngine.httpGetRequestEx(packet, this);
-        }
 
+//        updateView();
 
-        updateView();
-
-        mHandler = new Handler();
+//        mHandler = new Handler();
     }
 
-    private void showUpdateIcon(boolean flag){
-        if (flag){
-            mIVUpageIcon.setVisibility(View.VISIBLE);
-        }else{
-            mIVUpageIcon.setVisibility(View.GONE);
-        }
-    }
+//    private void showUpdateIcon(boolean flag){
+//        if (flag){
+//            mIVUpageIcon.setVisibility(View.VISIBLE);
+//        }else{
+//            mIVUpageIcon.setVisibility(View.GONE);
+//        }
+//    }
 
-    private void updateView(){
-
-        String value = getResources().getString(R.string.tvt_ver_pre) + CommonUtil.getSoftVersion(getParentActivity());
-        mTVVersion.setText(value);
-    }
+//    private void updateView(){
+//
+//        String value = getResources().getString(R.string.tvt_ver_pre) + CommonUtil.getSoftVersion(getParentActivity());
+//        mTVVersion.setText(value);
+//    }
 
     private void goAdviseActivity(){
         Intent intent = new Intent();
@@ -201,82 +201,82 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener,
     }
 
 
-    private void checkUpdate(){
-
-        if (object != null && object.mHaveNewVer != 0){
-            if (updateDialog != null){
-                updateDialog.dismiss();
-            }
-
-            updateDialog = getUpdateDialog(object.mContentList);
-            updateDialog.show();
-        }else{
-            PublicType.CheckUpdate object = PublicTypeBuilder.buildCheckUpdate(getParentActivity());
-
-
-            BaseRequestPacket packet = new BaseRequestPacket();
-            packet.action = PublicType.CHECK_UPDATE_MSGID;
-            packet.object = object;
-
-            mClientEngine.httpGetRequestEx(packet, this);
-            CommonUtil.showToast(R.string.toast_checking_update, getParentActivity());
-        }
-
-
-    }
-
-
-    private Dialog updateDialog;
-    private void onGetCheckUpdate( ResponseDataPacket dataPacket, Object extra){
-        object = new PublicType.CheckUpdateResult();
-
-        try {
-            object.parseJson(dataPacket.data);
-            //	log.e("mHaveNewVer = " + object.mHaveNewVer +  "\nmVerCode = " + object.mVerCode +
-            //			"\nmVerName = " + object.mVerName + "\nmAppUrl = " + object.mAppUrl + "\nmContent.size = " + object.mContentList.size());
-        } catch (JSONException e) {
-            e.printStackTrace();
-            CommonUtil.showToast(R.string.toast_anylizedata_fail, getParentActivity());
-            object = null;
-            return ;
-        }
-
-        if (object.mHaveNewVer != 0){
-            showUpdateIcon(true);
-            if (extra == null){
-                if (updateDialog != null){
-                    updateDialog.dismiss();
-                }
-
-                updateDialog = getUpdateDialog(object.mContentList);
-                updateDialog.show();
-            }
-            LAroundApplication.getInstance().setNewVersionFlag(object);
-        }else{
-            if (extra == null){
-                CommonUtil.showToast(R.string.toast_no_update, getParentActivity());
-            }
-
-        }
+//    private void checkUpdate(){
+//
+//        if (object != null && object.mHaveNewVer != 0){
+//            if (updateDialog != null){
+//                updateDialog.dismiss();
+//            }
+//
+//            updateDialog = getUpdateDialog(object.mContentList);
+//            updateDialog.show();
+//        }else{
+//            PublicType.CheckUpdate object = PublicTypeBuilder.buildCheckUpdate(getParentActivity());
+//
+//
+//            BaseRequestPacket packet = new BaseRequestPacket();
+//            packet.action = PublicType.CHECK_UPDATE_MSGID;
+//            packet.object = object;
+//
+//            mClientEngine.httpGetRequestEx(packet, this);
+//            CommonUtil.showToast(R.string.toast_checking_update, getParentActivity());
+//        }
+//
+//
+//    }
 
 
+//    private Dialog updateDialog;
+//    private void onGetCheckUpdate( ResponseDataPacket dataPacket, Object extra){
+//        object = new PublicType.CheckUpdateResult();
+//
+//        try {
+//            object.parseJson(dataPacket.data);
+//            //	log.e("mHaveNewVer = " + object.mHaveNewVer +  "\nmVerCode = " + object.mVerCode +
+//            //			"\nmVerName = " + object.mVerName + "\nmAppUrl = " + object.mAppUrl + "\nmContent.size = " + object.mContentList.size());
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//            CommonUtil.showToast(R.string.toast_anylizedata_fail, getParentActivity());
+//            object = null;
+//            return ;
+//        }
+//
+//        if (object.mHaveNewVer != 0){
+//            showUpdateIcon(true);
+//            if (extra == null){
+//                if (updateDialog != null){
+//                    updateDialog.dismiss();
+//                }
+//
+//                updateDialog = getUpdateDialog(object.mContentList);
+//                updateDialog.show();
+//            }
+//            LAroundApplication.getInstance().setNewVersionFlag(object);
+//        }else{
+//            if (extra == null){
+//                CommonUtil.showToast(R.string.toast_no_update, getParentActivity());
+//            }
+//
+//        }
+//
+//
+//
+//    }
 
-    }
-
-    private Dialog getUpdateDialog(List<String > list){
-        int size = list.size();
-        StringBuffer sBuffer = new StringBuffer();
-        for(int i = 0; i < size; i++){
-            String value = String.valueOf(i + 1) + "." + list.get(i);
-            sBuffer.append(value);
-            if (i != size - 1){
-                sBuffer.append("\n");
-            }
-        }
-        log.e("msg = " + sBuffer.toString());
-        Dialog dialog = DialogBuilder.buildNormalDialog(getParentActivity(), "版本更新" + object.mVerName, sBuffer.toString(), this);
-        return dialog;
-    }
+//    private Dialog getUpdateDialog(List<String > list){
+//        int size = list.size();
+//        StringBuffer sBuffer = new StringBuffer();
+//        for(int i = 0; i < size; i++){
+//            String value = String.valueOf(i + 1) + "." + list.get(i);
+//            sBuffer.append(value);
+//            if (i != size - 1){
+//                sBuffer.append("\n");
+//            }
+//        }
+//        log.e("msg = " + sBuffer.toString());
+//        Dialog dialog = DialogBuilder.buildNormalDialog(getParentActivity(), "版本更新" + object.mVerName, sBuffer.toString(), this);
+//        return dialog;
+//    }
 
 
 

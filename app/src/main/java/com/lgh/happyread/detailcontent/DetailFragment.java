@@ -20,7 +20,7 @@ import com.lgh.happyread.cache.SimpleImageLoader;
 import com.lgh.happyread.model.BaseType;
 import com.lgh.happyread.util.CommonLog;
 import com.lgh.happyread.util.LogFactory;
-import com.google.ads.AdView;
+//import com.google.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -130,7 +130,7 @@ public  class DetailFragment extends BaseFragment {
         private TextView mTVSource;
         private ImageView mIVContent;
         private android.view.ext.SatelliteMenu SatelliteMenu;
-        private AdView adView;
+//        private AdView adView;
 
 
         private SimpleImageLoader mImageLoader;
@@ -155,7 +155,7 @@ public  class DetailFragment extends BaseFragment {
             mTVSource = (TextView) view.findViewById(R.id.tv_source);
             mIVContent = (ImageView) view.findViewById(R.id.iv_content);
             SatelliteMenu = (android.view.ext.SatelliteMenu) view.findViewById(R.id.SatelliteMenu);
-            adView = (AdView) view.findViewById(R.id.adView);
+//            adView = (AdView) view.findViewById(R.id.adView);
             mBtnReadOrign.setOnClickListener(this);
             mIVContent.setOnClickListener(this);
 
@@ -193,10 +193,10 @@ public  class DetailFragment extends BaseFragment {
 
         @Override
         public void onDestroy() {
-
-            if (adView != null){
-                adView.destroy();
-            }
+//
+//            if (adView != null){
+//                adView.destroy();
+//            }
         }
 
         @Override

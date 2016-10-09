@@ -20,8 +20,8 @@ import com.lgh.happyread.util.FileManager;
 
 public class SettingFragment extends BaseFragment implements View.OnClickListener {
 
-    private View mBindView;
-    private View mMyPushView;
+//    private View mBindView;
+//    private View mMyPushView;
     private View mMyCollectView;
     private View mClieaCacheView;
     private View mAboutView;
@@ -70,8 +70,8 @@ public class SettingFragment extends BaseFragment implements View.OnClickListene
         mIVUpageIcon = (ImageView)view.findViewById(R.id.iv_updateicon);
 
 
-        mBindView.setOnClickListener(this);
-        mMyPushView.setOnClickListener(this);
+//        mBindView.setOnClickListener(this);
+//        mMyPushView.setOnClickListener(this);
         mMyCollectView.setOnClickListener(this);
         mClieaCacheView.setOnClickListener(this);
         mAboutView.setOnClickListener(this);
