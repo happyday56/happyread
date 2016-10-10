@@ -4,5 +4,5 @@ import java.util.Map;
 
 public interface IToStringMap {
 
-	public Map<String, String> toStringMap();
+	Map<String, String> toStringMap();
 }

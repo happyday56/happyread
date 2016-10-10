@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 文章显示处理
+ */
 public class InfomationPresenter implements IPresenter, InfoRequestProxy.IRequestResult {
 
 

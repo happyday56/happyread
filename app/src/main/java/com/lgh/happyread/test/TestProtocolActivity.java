@@ -221,7 +221,7 @@ public class TestProtocolActivity extends Activity implements OnClickListener, I
 		packet.action = PublicType.ABOUT_MSGID;
 		packet.object = object;
 		
-		mClientEngine.httpGetRequest(packet, this);
+//		mClientEngine.httpGetRequest(packet, this);
 	}
 	
 	
