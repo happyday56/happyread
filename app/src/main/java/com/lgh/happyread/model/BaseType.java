@@ -11,7 +11,7 @@ import java.util.List;
 
 public class BaseType {
 	private static final CommonLog log = LogFactory.createLog();
-	// ListItem
+	// ListItem 分类列表
 	public static class ListItem implements IParseJson{
 
 		public final static String KEY_TYPEINTRO = "typeIntro";
