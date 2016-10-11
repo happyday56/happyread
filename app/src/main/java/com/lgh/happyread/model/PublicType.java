@@ -14,6 +14,15 @@ import java.util.Map;
 /*import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;*/
 
+/**
+ *  用户登录
+ *  用户注册
+ *  绑定token
+ *  点击广告
+ *  获取资讯类型列表
+ *  获取资讯
+ *   检测升级
+ */
 public class PublicType {
 
 	private static final CommonLog log = LogFactory.createLog();
@@ -113,7 +122,7 @@ public class PublicType {
 	public static class UserLoginResult implements IParseJson{
 
 
-		public final static String KEY_DATALIST = "DataList";
+		public final static String KEY_DATALIST = "dataList";
 		public final static String KEY_ADMIN = "isAdmin";
 		public final static String KEY_ADTYPE = "adType";
 

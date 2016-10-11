@@ -11,10 +11,10 @@ public class ResponseDataPacket implements IParseJson{
 	
 	private static final CommonLog log = LogFactory.createLog();
 	
-	public final static String KEY_RESULT = "Result";
-	public final static String KEY_DATA = "Data";
-	public final static String KEY_CODE = "Code";
-	public final static String KEY_MSG = "Msg";
+	public final static String KEY_RESULT = "result";
+	public final static String KEY_DATA = "data";
+	public final static String KEY_CODE = "code";
+	public final static String KEY_MSG = "msg";
 	
 
     public JSONObject data = new JSONObject();

@@ -10,15 +10,15 @@ public class ServerUrlBuilder {
 
     private static final CommonLog log = LogFactory.createLog();
 
-    public static final String baseURL = "http://www.runapp.cn/Topics/public/";
-//	public static final String baseURL = "http://192.168.1.108/Topics/public/App/";
+//    public static final String baseURL = "http://www.runapp.cn/Topics/public/";
+	public static final String baseURL = "http://192.168.1.102:8080/";
 
     public static final String registerURL = "App/Register";
     public static final String loginURL = "App/Login";
     public static final String bindtokenURL = "App/BandExternInfo";
     public static final String adclickURL = "App/AdClick";
     public static final String aboutURL = "App/About";
-    public static final String getInfotURL = "Topic/list";
+    public static final String getInfotURL = "App/list";
     public static final String deleeteITopicURL = "Topic/Delete";
     public static final String checkUpdateURL = "App/versioncheck";
 

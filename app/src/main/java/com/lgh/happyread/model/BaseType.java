@@ -9,6 +9,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 分类列表
+ * 文章列表
+ */
 public class BaseType {
 	private static final CommonLog log = LogFactory.createLog();
 	// ListItem 分类列表
