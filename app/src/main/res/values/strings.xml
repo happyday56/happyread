@@ -16,7 +16,7 @@
    <string name="toast_login_fail">登录失败</string>  
    <string name="toast_getdata_fail">获取数据失败</string>  
    <string name="toast_anylizedata_fail">解析数据失败</string> 
-   <string name="toast_collect_success">收藏成功</string> 
+   <string name="toast_collect_success">收藏成功</string>
    <string name="toast_save_fail">未检测到SD卡，保存失败</string> 
    <string name="toast_save_success">保存成功 </string>
    <string name="toast_save_fail2">保存失败</string>

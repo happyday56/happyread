@@ -1,145 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:sat="http://schemas.android.com/apk/res/com.lgh.happyread"
-    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
-	android:id="@+id/ll_rootview"
-    android:orientation="vertical" 
-    android:background="@color/window_bg" 
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:sat="http://schemas.android.com/apk/res/com.lgh.happyread"
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:id="@+id/ll_rootview"
+        android:orientation="vertical"
+        android:background="@color/window_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
 
-    <FrameLayout 
-        android:layout_width="fill_parent" 
-    	android:layout_height="fill_parent">
-       
-        <ScrollView 
-        android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical" 
-        android:focusable="true" 
-        android:focusableInTouchMode="true" 
-        android:visibility="visible" 
-        android:layout_width="fill_parent" 
-        android:layout_height="wrap_content" >           
-       		<LinearLayout 
-            android:layout_width="fill_parent" 
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:orientation="vertical">  
-            
-            
-	            <TextView
-		        android:id="@+id/tv_title"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="10dp"
-		        android:textSize="20sp"
-		        android:textColor="#222222" />
-	            
-	            <LinearLayout 
-	            android:layout_width="fill_parent" 
-	            android:layout_height="wrap_content"
-	            android:layout_marginTop="5dp">
-	               
-	                <TextView
-			        android:id="@+id/tv_artist"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:textSize="18sp"
-			        android:textColor="#666666" />
-	                
-	                <TextView
-			        android:id="@+id/tv_time"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:layout_marginLeft="15dp"
-			        android:textSize="18sp"
-			        android:textColor="#666666"/>
-	    	     </LinearLayout>
-            
-            	<View android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
-                 
-	            <ImageView
-	                android:id="@+id/iv_content"
-			        android:layout_width="fill_parent"
-			        android:layout_height="wrap_content"
-			        android:layout_marginTop="10dp"
-		
-			        android:src="@drawable/load_img">
-	                
-	            </ImageView>
-            
-	            <TextView
-		        android:id="@+id/tv_content"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_marginBottom="15dp"
-		        android:textSize="18sp"
-		        android:textColor="#444444" />
-	                     
-           		<View android:background="@color/black" android:layout_width="fill_parent" android:layout_height="1.0px" />
-             
-	            <RelativeLayout 
-	            android:layout_width="fill_parent" 
-	            android:layout_height="wrap_content"
-	            android:layout_marginTop="5dp">
-	               
-	                <TextView
-			        android:id="@+id/tv_source"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:layout_centerVertical="true"
-			        android:text="来源:未知"
-			        android:textSize="18sp" 
-			        android:textColor="#222222"/>
-	                
-	                <Button
-			        android:id="@+id/btn_readorign"
-			        android:layout_width="100dp"
-			        android:layout_height="30dp"
-			        android:layout_marginRight="10dp"
-					android:layout_alignParentRight="true"
-			        android:layout_centerVertical="true"
-			        android:text="@string/read_orign"
-			        android:background="@drawable/selector_btn_white"/>
-	            </RelativeLayout>
-                
-       		 </LinearLayout>         
-   		 </ScrollView>
- 
-        		        
-         <RelativeLayout 
-		  android:layout_width="match_parent"
-		  android:layout_height="match_parent">
-       		
-              <!--<com.google.ads.AdView -->
-				  <!--android:id="@+id/adView" -->
-				  <!--android:layout_width="fill_parent"   -->
-				  <!--android:layout_height="wrap_content"-->
-				  <!--android:layout_alignParentBottom="true"-->
-				  <!--ads:adUnitId="@string/adv_id"-->
-				  <!--ads:adSize="BANNER" -->
-				  <!--ads:loadAdOnCreate="true"-->
-				  <!--/> -->
-		  <!---->
-                        
-               <android.view.ext.SatelliteMenu
-		       android:id="@+id/SatelliteMenu"
-		       android:layout_width="wrap_content"
-		       android:layout_height="wrap_content"
-		       android:layout_alignParentBottom="true"
-		       android:layout_margin="8dp"
-		       sat:satelliteDistance="170dp"
-		       sat:mainImage="@drawable/ic_launcher"
-		       sat:totalSpacingDegree="90"
-		       sat:closeOnClick="true"
-		       sat:expandDuration="500"/>
-               
-         </RelativeLayout>    	 
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <ScrollView
+                android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:visibility="visible"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:orientation="vertical">
+
+
+                <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="20sp"
+                        android:textColor="#222222"/>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                    <TextView
+                            android:id="@+id/tv_artist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textColor="#666666"/>
+
+                    <TextView
+                            android:id="@+id/tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="18sp"
+                            android:textColor="#666666"/>
+                </LinearLayout>
+
+                <View android:background="@color/black" android:layout_width="fill_parent"
+                      android:layout_height="1.0px"/>
+
+                <ImageView
+                        android:id="@+id/iv_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:src="@drawable/load_img">
+
+                </ImageView>
+
+                <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:textSize="18sp"
+                        android:textColor="#444444"/>
+
+                <View android:background="@color/black" android:layout_width="fill_parent"
+                      android:layout_height="1.0px"/>
+
+                <!--<RelativeLayout -->
+                <!--android:layout_width="fill_parent" -->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_source"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:text="来源:未知"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="#222222"/>-->
+                <!---->
+                <!--<Button-->
+                <!--android:id="@+id/btn_readorign"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:text="@string/read_orign"-->
+                <!--android:background="@drawable/selector_btn_white"/>-->
+                <!--</RelativeLayout>-->
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <!--<com.google.ads.AdView -->
+            <!--android:id="@+id/adView" -->
+            <!--android:layout_width="fill_parent"   -->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--ads:adUnitId="@string/adv_id"-->
+            <!--ads:adSize="BANNER" -->
+            <!--ads:loadAdOnCreate="true"-->
+            <!--/> -->
+            <!---->
+
+            <android.view.ext.SatelliteMenu
+                    android:id="@+id/SatelliteMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="8dp"
+                    sat:satelliteDistance="170dp"
+                    sat:mainImage="@drawable/ic_launcher"
+                    sat:totalSpacingDegree="90"
+                    sat:closeOnClick="true"
+                    sat:expandDuration="500"/>
+
+        </RelativeLayout>
     </FrameLayout>
-    
+
 </LinearLayout>
 
 

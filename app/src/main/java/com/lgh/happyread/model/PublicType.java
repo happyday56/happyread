@@ -271,7 +271,7 @@ public class PublicType {
 	// 获取资讯回应
 	public static class GetInfoResult  implements IParseJson{
 
-		public final static String KEY_DATALIST = "DataList";
+		public final static String KEY_DATALIST = "dataList";
 		
 		public List<BaseType.InfoItem> mDataList = new ArrayList<BaseType.InfoItem>();
 

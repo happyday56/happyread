@@ -122,12 +122,12 @@ public  class DetailFragment extends BaseFragment {
         private final static int QZONE = 5;
 
 
-        private Button mBtnReadOrign;
+//        private Button mBtnReadOrign;
         private TextView mTVTitle;
         private TextView mTVArtist;
         private TextView mTVContent;
         private TextView mTVTime;
-        private TextView mTVSource;
+//        private TextView mTVSource;
         private ImageView mIVContent;
         private android.view.ext.SatelliteMenu SatelliteMenu;
 //        private AdView adView;
@@ -147,16 +147,16 @@ public  class DetailFragment extends BaseFragment {
         @Override
         public void setupView(View view) {
             mRootView = view;
-            mBtnReadOrign = (Button) view.findViewById(R.id.btn_readorign);
+//            mBtnReadOrign = (Button) view.findViewById(R.id.btn_readorign);
             mTVTitle = (TextView) view.findViewById(R.id.tv_title);
             mTVArtist = (TextView) view.findViewById(R.id.tv_artist);
             mTVContent = (TextView) view.findViewById(R.id.tv_content);
             mTVTime = (TextView) view.findViewById(R.id.tv_time);
-            mTVSource = (TextView) view.findViewById(R.id.tv_source);
+//            mTVSource = (TextView) view.findViewById(R.id.tv_source);
             mIVContent = (ImageView) view.findViewById(R.id.iv_content);
             SatelliteMenu = (android.view.ext.SatelliteMenu) view.findViewById(R.id.SatelliteMenu);
 //            adView = (AdView) view.findViewById(R.id.adView);
-            mBtnReadOrign.setOnClickListener(this);
+//            mBtnReadOrign.setOnClickListener(this);
             mIVContent.setOnClickListener(this);
 
             mImageLoader = new SimpleImageLoader(getParentActivity());
@@ -203,9 +203,9 @@ public  class DetailFragment extends BaseFragment {
         public void onClick(View view) {
 
             switch(view.getId()){
-                case R.id.btn_readorign:
-                   mPresenter.enterWebView();
-                    break;
+//                case R.id.btn_readorign:
+//                   mPresenter.enterWebView();
+//                    break;
                 case R.id.iv_content:
                     mPresenter.enterPhoneView();
                     break;

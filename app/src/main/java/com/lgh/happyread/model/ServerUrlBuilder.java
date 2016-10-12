@@ -11,7 +11,7 @@ public class ServerUrlBuilder {
     private static final CommonLog log = LogFactory.createLog();
 
 //    public static final String baseURL = "http://www.runapp.cn/Topics/public/";
-	public static final String baseURL = "http://192.168.1.102:8080/";
+	public static final String baseURL = "http://192.168.1.92:8080/";
 
     public static final String registerURL = "App/Register";
     public static final String loginURL = "App/Login";
