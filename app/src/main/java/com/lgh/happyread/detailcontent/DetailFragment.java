@@ -8,8 +8,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ext.SatelliteMenuItem;
-import android.widget.Button;
+//import android.view.ext.SatelliteMenuItem;
+//import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,7 +25,10 @@ import com.lgh.happyread.util.LogFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class DetailFragment extends BaseFragment {
+/**
+ * 详情页面
+ */
+public class DetailFragment extends BaseFragment {
 
     private static final CommonLog log = LogFactory.createLog();
 
@@ -34,20 +37,20 @@ public  class DetailFragment extends BaseFragment {
     private DetailContract.IView mDetailView;
 
 
-    public DetailFragment(){
-    
+    public DetailFragment() {
+
     }
-    
-    
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-       View view = inflater.inflate(R.layout.detail_fragment_layout, null);
+        View view = inflater.inflate(R.layout.detail_fragment_layout, null);
         return view;
     }
 
@@ -79,7 +82,7 @@ public  class DetailFragment extends BaseFragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu_collect:
                 mDetailPresenter.collect();
                 break;
@@ -96,7 +99,7 @@ public  class DetailFragment extends BaseFragment {
     }
 
 
-    private void onUIReady(View view){
+    private void onUIReady(View view) {
         mRootView = view.findViewById(R.id.ll_rootview);
 
         mDetailPresenter = new DetailPresenter();
@@ -107,9 +110,8 @@ public  class DetailFragment extends BaseFragment {
     }
 
 
-
-    private class DetailView implements DetailContract.IView,  View.OnClickListener,
-            android.view.ext.SatelliteMenu.SateliteClickedListener{
+    private class DetailView implements DetailContract.IView, View.OnClickListener {
+//          ,  android.view.ext.SatelliteMenu.SateliteClickedListener{
 
         private Context mContext;
         private DetailContract.IPresenter mPresenter;
@@ -122,20 +124,20 @@ public  class DetailFragment extends BaseFragment {
         private final static int QZONE = 5;
 
 
-//        private Button mBtnReadOrign;
+        //        private Button mBtnReadOrign;
         private TextView mTVTitle;
         private TextView mTVArtist;
         private TextView mTVContent;
         private TextView mTVTime;
-//        private TextView mTVSource;
+        //        private TextView mTVSource;
         private ImageView mIVContent;
-        private android.view.ext.SatelliteMenu SatelliteMenu;
+//        private android.view.ext.SatelliteMenu SatelliteMenu;
 //        private AdView adView;
 
 
         private SimpleImageLoader mImageLoader;
 
-        public DetailView(Context context){
+        public DetailView(Context context) {
             mContext = context;
         }
 
@@ -154,26 +156,26 @@ public  class DetailFragment extends BaseFragment {
             mTVTime = (TextView) view.findViewById(R.id.tv_time);
 //            mTVSource = (TextView) view.findViewById(R.id.tv_source);
             mIVContent = (ImageView) view.findViewById(R.id.iv_content);
-            SatelliteMenu = (android.view.ext.SatelliteMenu) view.findViewById(R.id.SatelliteMenu);
+//            SatelliteMenu = (android.view.ext.SatelliteMenu) view.findViewById(R.id.SatelliteMenu);
 //            adView = (AdView) view.findViewById(R.id.adView);
 //            mBtnReadOrign.setOnClickListener(this);
             mIVContent.setOnClickListener(this);
 
             mImageLoader = new SimpleImageLoader(getParentActivity());
-            List<SatelliteMenuItem> items = new ArrayList<SatelliteMenuItem>();
-            items.add(new SatelliteMenuItem(SINA_ID, R.drawable.logo_sina));
-            items.add(new SatelliteMenuItem(TENCENT_ID, R.drawable.logo_tencentweibo));
-            items.add(new SatelliteMenuItem(WECHAT_ID, R.drawable.logo_wechat));
-            items.add(new SatelliteMenuItem(WECHAT_MOM_ID, R.drawable.logo_wechatmoments));
-            items.add(new SatelliteMenuItem(QZONE, R.drawable.logo_qzone));
-            SatelliteMenu.addItems(items);
-            SatelliteMenu.setOnItemClickedListener(this);
+//            List<SatelliteMenuItem> items = new ArrayList<SatelliteMenuItem>();
+//            items.add(new SatelliteMenuItem(SINA_ID, R.drawable.logo_sina));
+//            items.add(new SatelliteMenuItem(TENCENT_ID, R.drawable.logo_tencentweibo));
+//            items.add(new SatelliteMenuItem(WECHAT_ID, R.drawable.logo_wechat));
+//            items.add(new SatelliteMenuItem(WECHAT_MOM_ID, R.drawable.logo_wechatmoments));
+//            items.add(new SatelliteMenuItem(QZONE, R.drawable.logo_qzone));
+//            SatelliteMenu.addItems(items);
+//            SatelliteMenu.setOnItemClickedListener(this);
 
         }
 
         @Override
-        public  void updateToolTitle(String title){
-            if ( getParentActivity() instanceof ToolbarFragmentActivity){
+        public void updateToolTitle(String title) {
+            if (getParentActivity() instanceof ToolbarFragmentActivity) {
                 ((ToolbarFragmentActivity) getParentActivity()).updateToolTitle(title);
             }
         }
@@ -184,9 +186,9 @@ public  class DetailFragment extends BaseFragment {
             mTVArtist.setText(object.mUserName);
             mTVContent.setText(object.mContent);
             mTVTime.setText(object.mTime);
-            mTVContent.setText(object.mContent);
+//            mTVContent.setText(object.mContent);
             mImageLoader.DisplayImage(object.getImageURL(0), mIVContent);
-            if (object.getThumnaiImageCount() == 0){
+            if (object.getThumnaiImageCount() == 0) {
                 mIVContent.setVisibility(View.GONE);
             }
         }
@@ -202,7 +204,7 @@ public  class DetailFragment extends BaseFragment {
         @Override
         public void onClick(View view) {
 
-            switch(view.getId()){
+            switch (view.getId()) {
 //                case R.id.btn_readorign:
 //                   mPresenter.enterWebView();
 //                    break;
@@ -214,32 +216,30 @@ public  class DetailFragment extends BaseFragment {
         }
 
 
-
-        @Override
-        public void eventOccured(int id) {
-            log.i("Clicked on " + id);
-
-            switch(id){
-                case SINA_ID:
-                     mPresenter.shareToSina();
-                    break;
-                case TENCENT_ID:
-                    mPresenter.shareToTencent();
-                    break;
-                case WECHAT_ID:
-                    mPresenter.shareToWChat();
-                    break;
-                case WECHAT_MOM_ID:
-                    mPresenter.shareToWFriend();
-                    break;
-                case QZONE:
-                    mPresenter.shareToQZone();
-                    break;
-            }
-        }
+//        @Override
+//        public void eventOccured(int id) {
+//            log.i("Clicked on " + id);
+//
+//            switch (id) {
+//                case SINA_ID:
+//                    mPresenter.shareToSina();
+//                    break;
+//                case TENCENT_ID:
+//                    mPresenter.shareToTencent();
+//                    break;
+//                case WECHAT_ID:
+//                    mPresenter.shareToWChat();
+//                    break;
+//                case WECHAT_MOM_ID:
+//                    mPresenter.shareToWFriend();
+//                    break;
+//                case QZONE:
+//                    mPresenter.shareToQZone();
+//                    break;
+//            }
+//        }
 
     }
-
 
 
 }

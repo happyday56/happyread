@@ -29,7 +29,7 @@ public class ContentViewHolder0 extends  RecyclerView.ViewHolder implements View
     public void bindInfo( BaseType.InfoItem item){
         mItem = item;
         tvTitle.setText(item.mTitle);
-        tvContent.setText(item.mContent);
+        tvContent.setText(item.mSummary);
         tvArtist.setText(item.mUserName);
 
     }

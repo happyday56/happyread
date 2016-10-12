@@ -35,7 +35,7 @@ public class ContentViewHolder1 extends  RecyclerView.ViewHolder implements View
     public void bindInfo(ImageLoaderEx imageLoaderEx, BaseType.InfoItemEx item, boolean isBusy){
         mItem = item;
         tvTitle.setText(item.mTitle);
-        tvContent.setText(item.mContent);
+        tvContent.setText(item.mSummary);
         tvArtist.setText(item.mUserName);
 
         int thumailImageCount = item.getThumnaiImageCount();

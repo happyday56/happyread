@@ -22,6 +22,9 @@ import com.lgh.happyread.util.CommonUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 列表页面
+ */
 public  class CollectFragment extends BaseFragment {
 
     private View mRootView;

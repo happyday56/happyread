@@ -127,17 +127,17 @@
             <!--/> -->
             <!---->
 
-            <android.view.ext.SatelliteMenu
-                    android:id="@+id/SatelliteMenu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_margin="8dp"
-                    sat:satelliteDistance="170dp"
-                    sat:mainImage="@drawable/ic_launcher"
-                    sat:totalSpacingDegree="90"
-                    sat:closeOnClick="true"
-                    sat:expandDuration="500"/>
+            <!--<android.view.ext.SatelliteMenu-->
+                    <!--android:id="@+id/SatelliteMenu"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_margin="8dp"-->
+                    <!--sat:satelliteDistance="170dp"-->
+                    <!--sat:mainImage="@drawable/ic_launcher"-->
+                    <!--sat:totalSpacingDegree="90"-->
+                    <!--sat:closeOnClick="true"-->
+                    <!--sat:expandDuration="500"/>-->
 
         </RelativeLayout>
     </FrameLayout>
